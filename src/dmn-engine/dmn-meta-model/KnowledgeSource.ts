@@ -1,6 +1,6 @@
 import { DRGElement } from "./DRGElement"
-import { OrganisationalUnit } from "./types"
 import { AuthorityRequirement } from "./AuthorityRequirement"
+import { OrganisationalUnit } from "./OrganisationalUnit"
 
 export class KnowledgeSource extends DRGElement {
   type?: string

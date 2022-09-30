@@ -1,3 +1,5 @@
 import { DMNElement } from "./DMNElement"
 
-export class Expression extends DMNElement {}
+export abstract class Expression extends DMNElement {
+  public typeRef?: string
+}

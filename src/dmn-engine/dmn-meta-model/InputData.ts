@@ -1,6 +1,6 @@
 import { DRGElement } from "./DRGElement"
-import { InformationItem } from "./types"
 import { AuthorityRequirement } from "./AuthorityRequirement"
+import { InformationItem } from "./InformationItem"
 
 export class InputData extends DRGElement {
   variable: InformationItem

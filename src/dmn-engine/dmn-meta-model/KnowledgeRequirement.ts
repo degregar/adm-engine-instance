@@ -1,5 +1,5 @@
 import { DMNElement } from "./DMNElement"
-import { Invocable } from "./types"
+import { Invocable } from "./Invocable"
 
 /**
  * https://www.omg.org/spec/DMN/1.3/PDF#6.3.14

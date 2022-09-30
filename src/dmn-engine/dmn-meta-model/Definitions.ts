@@ -1,8 +1,11 @@
 import { NamedElement } from "./NamedElement"
-import { BusinessContextElement, DMNDI, ElementCollection, ItemDefinition } from "./types"
 import { DRGElement } from "./DRGElement"
-import { Artifact } from "./artifact"
+import { Artifact } from "./Artifact"
 import { Import } from "./Import"
+import { ItemDefinition } from "./ItemDefinition"
+import { ElementCollection } from "./ElementCollection"
+import { BusinessContextElement } from "./BusinessContextElement"
+import { DMNDI } from "./DMNDI"
 
 export type Definitions = NamedElement & {
   namespace: string

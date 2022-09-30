@@ -1,6 +1,6 @@
-import { Invocable } from "./types"
 import { Decision } from "./Decision"
 import { InputData } from "./InputData"
+import { Invocable } from "./Invocable"
 
 /**
  * https://www.omg.org/spec/DMN/1.3/PDF#6.3.10

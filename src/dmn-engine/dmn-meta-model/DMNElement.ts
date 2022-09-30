@@ -1,4 +1,4 @@
-import { ID } from "./types"
+import { ID } from "./ID"
 
 export abstract class DMNElement {
   public id?: ID
