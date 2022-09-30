@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0qwq1bd" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.3.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.0.0">
+    <decision id="Decision_1wjnwy9" name="Applicant Risk Rating">
+        <decisionTable id="DecisionTable_1pgzpc4">
+            <input id="InputClause_12wuwhw" label="Applicant Age">
+                <inputExpression id="LiteralExpression_0w3jirh" typeRef="number">
+                    <text>applicantAge</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_071r52k" label="Medical History">
+                <inputExpression id="LiteralExpression_1emx5sy" typeRef="string">
+                    <text>medicalHistory</text>
+                </inputExpression>
+                <inputValues id="UnaryTests_07t0gtx">
+                    <text>"good","bad"</text>
+                </inputValues>
+            </input>
+            <output id="OutputClause_10bykns" label="Applicant Risk Rating" name="applicantRiskRating" typeRef="string">
+                <outputValues id="UnaryTests_1i13jj7">
+                    <text>"Low","Medium","High"</text>
+                </outputValues>
+            </output>
+            <rule id="DecisionRule_1uuda64">
+                <inputEntry id="UnaryTests_1afcruz">
+                    <text>&gt; 60</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1v5t1nj">
+                    <text>"good"</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0uw16b2">
+                    <text>"Medium"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0x1jxh2">
+                <inputEntry id="UnaryTests_1x75ubt">
+                    <text>&gt; 60</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0zskcmz">
+                    <text>"bad"</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_07azaio">
+                    <text>"High"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0vgqaqc">
+                <inputEntry id="UnaryTests_13fz6ah">
+                    <text>[25..60]</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1caxkus">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_11g6t3l">
+                    <text>"Medium"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0of9dzm">
+                <inputEntry id="UnaryTests_15mnr6j">
+                    <text>&lt; 25</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0r27vh5">
+                    <text>"good"</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_05hf08a">
+                    <text>"Low"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1saun3h">
+                <inputEntry id="UnaryTests_02yi8sv">
+                    <text>&lt; 25</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_16g7vd4">
+                    <text>"bad"</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1m3vcjv">
+                    <text>"Medium"</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_10dhu8d">
+                <inputEntry id="UnaryTests_0ko3biu">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_19qqj0m">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0tb7f0a">
+                    <text></text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram>
+            <dmndi:DMNShape id="DMNShape_0r52znz" dmnElementRef="Decision_1wjnwy9">
+                <dc:Bounds height="80" width="180" x="260" y="200" />
+            </dmndi:DMNShape>
+        </dmndi:DMNDiagram>
+    </dmndi:DMNDI>
+</definitions>
